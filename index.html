@@ -333,19 +333,19 @@ body.editing .link-card .edit-link{display:block}
   .detail-pane .detail-body{padding:24px 20px 30px}.detail-pane h3{font-size:22px}.detail-pane p{font-size:15px}
   .modal-close{width:34px;height:34px;top:10px;right:10px}
   .lightbox button{width:42px;height:42px;font-size:24px}
-  .edit-toolbar{right:12px;bottom:12px;padding:7px 8px;gap:6px;border-radius:12px;justify-content:flex-end}
+  .edit-toolbar{right:12px;bottom:70px;padding:7px 8px;gap:6px;border-radius:12px;justify-content:flex-end}
   body.editing .edit-toolbar{left:12px}
   .edit-toolbar button{padding:9px 12px;font-size:13px}
   #edit-status{font-size:11px;line-height:1.25;flex:1;max-width:none}
   #edit-status:empty{display:none}
   body.editing .back-top{display:none}
-  .back-top{left:12px;bottom:12px;width:40px;height:40px}
+  .back-top{left:12px;bottom:70px;width:40px;height:40px}
   .detail-btn{left:10px;bottom:8px}
 }
 @media(max-width:380px){.hero-tag{flex-basis:100%}.hero h1{font-size:36px}}
 
 /* edit toolbar */
-.edit-toolbar{position:fixed;bottom:18px;right:18px;z-index:1500;display:flex;align-items:center;gap:8px;background:var(--navy2);padding:8px 10px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.edit-toolbar{position:fixed;bottom:76px;right:18px;z-index:2147483000;display:flex;align-items:center;gap:8px;background:var(--navy2);padding:8px 10px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
 .edit-toolbar button{font-family:inherit;font-weight:700;border:none;border-radius:10px;padding:10px 16px;cursor:pointer;background:var(--blue);color:#fff;font-size:14px}
 #toggle-edit.active{background:#DC2626}
 #undo-btn,#redo-btn{display:none;font-size:16px;padding:9px 13px;background:#2E4A9C}
@@ -355,7 +355,7 @@ body.editing [contenteditable="true"]{outline:2px dashed var(--blue2);outline-of
 body.editing [contenteditable="true"]:focus{outline-color:#DC2626;background:rgba(255,255,255,.6)}
 body.editing .photo-frame,body.editing .team-photo-slot,body.editing .hero-photo{cursor:pointer;box-shadow:0 0 0 3px var(--blue2)}
 body.editing .res-card h3,body.editing .res-card p{outline:2px dashed var(--blue2);outline-offset:3px;border-radius:4px;cursor:text}
-.back-top{position:fixed;left:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:var(--shadow);display:none;place-items:center;cursor:pointer;z-index:1400}
+.back-top{position:fixed;left:18px;bottom:76px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:var(--shadow);display:none;place-items:center;cursor:pointer;z-index:1400}
 .back-top.show{display:grid}.back-top svg{width:20px;height:20px}
 </style>
 </head>
