@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PromptWise — Writing for the Planet in the Digital Era</title>
+<meta name="description" content="PromptWise: Erasmus+ Mobility of Youth Workers on AI literacy, prompt writing and digital sustainability. 15 – 24 October 2026, Istanbul, Türkiye.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 64 64%27%3E%3Crect width=%2764%27 height=%2764%27 rx=%2714%27 fill=%27%2314286B%27/%3E%3Ctext x=%2732%27 y=%2744%27 font-family=%27Arial%27 font-weight=%27900%27 font-size=%2734%27 fill=%27white%27 text-anchor=%27middle%27%3EP%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&family=Bebas+Neue&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#14286B; --navy2:#0E1F55; --blue:#1E56D9; --blue2:#3B82F6; --sky:#DCE6FB; --ice:#EEF3FB;
+  --ink:#0B1230; --slate:#3C4A66; --muted:#6B7891; --line:#E1E7F3; --white:#fff;
+  --shadow:0 16px 40px rgba(20,40,107,.10); --r:18px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Poppins',system-ui,sans-serif;color:var(--ink);background:var(--white);line-height:1.6;overflow-x:hidden}
+img{max-width:100%;display:block}
+a{color:inherit}
+.container{max-width:1180px;margin:0 auto;padding:0 24px}
+.disp{font-family:'Bebas Neue','Poppins',sans-serif;letter-spacing:.04em}
+.section-label{display:inline-block;font-size:12px;font-weight:700;letter-spacing:.18em;text-transform:uppercase;color:var(--blue);margin-bottom:10px}
+.section-title{font-size:clamp(30px,4.2vw,46px);font-weight:800;line-height:1.1;color:var(--navy);text-transform:uppercase;letter-spacing:.01em}
+.section-title .highlight{color:var(--blue)}
+.lead{color:var(--slate);max-width:720px;margin:14px auto 0;font-size:16.5px}
+.center{text-align:center}
+section{position:relative}
+/* geometric diagonal stripes like the infopack */
+.geo{background:linear-gradient(120deg,#fff 0%,#f3f5f9 45%,#e6eaf1 100%);position:relative;overflow:hidden}
+.geo::before,.geo::after{content:"";position:absolute;inset:-40%;pointer-events:none;
+  background:repeating-linear-gradient(135deg,transparent 0 180px,rgba(20,40,107,.045) 180px 260px)}
+.geo::after{background:repeating-linear-gradient(135deg,transparent 0 420px,rgba(255,255,255,.65) 420px 520px)}
+.geo>*{position:relative;z-index:1}
+.tri{position:absolute;width:0;height:0;border-style:solid;pointer-events:none;z-index:0}
+.tri.a{border-width:0 0 120px 120px;border-color:transparent transparent var(--blue) transparent;opacity:.9}
+.tri.b{border-width:90px 90px 0 0;border-color:var(--navy) transparent transparent transparent}
+.tri.c{border-width:0 70px 70px 0;border-color:transparent var(--blue2) transparent transparent;opacity:.8}
+
+/* nav */
+.scroll-prog{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--blue),var(--blue2));z-index:1000}
+.nav{position:sticky;top:0;z-index:900;background:rgba(255,255,255,.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.nav-inner{max-width:1180px;margin:0 auto;padding:12px 24px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.nav-logo{display:flex;align-items:center;gap:10px;font-weight:800;color:var(--navy);text-decoration:none;font-size:18px;letter-spacing:.02em}
+.nav-logo .mark{width:34px;height:34px;border-radius:9px;background:var(--navy);display:grid;place-items:center;color:#fff}
+.nav-logo .mark svg{width:20px;height:20px}
+.nav-links{display:flex;gap:4px;flex-wrap:wrap}
+.nav-links a{text-decoration:none;color:var(--slate);font-weight:600;font-size:13.5px;padding:8px 11px;border-radius:9px;transition:.2s}
+.nav-links a:hover,.nav-links a.active{background:var(--ice);color:var(--navy)}
+.nav-toggle{display:none;background:none;border:1px solid var(--line);border-radius:9px;padding:7px;cursor:pointer;color:var(--navy)}
+.nav-toggle svg{width:22px;height:22px}
+@media(max-width:900px){.nav-toggle{display:block}.nav-links{display:none;width:100%;flex-direction:column}.nav-links.open{display:flex}}
+
+/* logo bar */
+.eu-logobar{background:#fff;border-bottom:1px solid var(--line);padding:12px 24px;display:flex;align-items:center;justify-content:center;gap:34px;flex-wrap:wrap}
+.eu-logobar.bottom{border-top:1px solid var(--line);border-bottom:none}
+.eu-logo{display:inline-flex;align-items:center;height:48px}
+.eu-logo svg,.eu-logo img{height:48px;width:auto}
+.eu-logo.vmdo img{height:52px;border-radius:6px}
+
+/* hero */
+.hero{min-height:88vh;display:grid;align-items:center;padding:70px 0 60px}
+.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:8px;background:var(--navy);color:#fff;font-weight:700;font-size:12.5px;letter-spacing:.12em;text-transform:uppercase;padding:8px 14px;border-radius:999px}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#7CF2A8;box-shadow:0 0 0 4px rgba(124,242,168,.25)}
+.hero h1{font-size:clamp(40px,6vw,76px);font-weight:900;line-height:.98;color:var(--navy);text-transform:uppercase;margin:22px 0 6px;letter-spacing:-.01em}
+.hero h1 span{display:block;color:var(--blue);font-size:.52em;font-weight:800;letter-spacing:.02em;margin-top:8px;line-height:1.1}
+.hero-kicker{font-weight:700;color:var(--slate);font-size:18px;margin-top:10px}
+.hero-subtitle{color:var(--slate);font-size:17px;max-width:600px;margin-top:16px}
+.hero-details{display:flex;flex-wrap:wrap;gap:12px;margin-top:26px}
+.hero-tag{display:inline-flex;align-items:center;gap:9px;background:var(--navy);color:#fff;padding:10px 16px;border-radius:12px;font-family:'Bebas Neue',sans-serif;font-size:22px;letter-spacing:.06em;line-height:1}
+.hero-tag.light{background:#fff;color:var(--navy);border:2px solid var(--navy)}
+.hero-tag svg{width:20px;height:20px}
+.hero-flags{margin-top:22px;font-size:30px;letter-spacing:6px;line-height:1}
+.hero-photo{position:relative;aspect-ratio:1/1.05;border-radius:28px;overflow:hidden;box-shadow:var(--shadow);background:var(--ice);
+  display:flex;align-items:center;justify-content:center;color:var(--muted);font-weight:600}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;inset:0;background:linear-gradient(200deg,transparent 55%,rgba(20,40,107,.45))}
+.hero-photo .tri{z-index:3}
+.hero-scroll{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;flex-direction:column;align-items:center;gap:4px}
+.hero-scroll svg{width:18px;height:18px;animation:bob 1.6s infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(5px)}}
+@media(max-width:900px){.hero-grid{grid-template-columns:1fr}.hero{padding:44px 0 70px;min-height:auto}.hero-photo{max-width:420px;margin:0 auto}}
+
+/* about */
+.about{padding:90px 0;background:#fff}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:50px;align-items:center}
+.about-text p{color:var(--slate);margin-top:14px;font-size:16px}
+.about-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:28px}
+.stat-card{background:var(--navy);color:#fff;border-radius:16px;padding:18px 14px;text-align:center}
+.stat-card .number{font-family:'Bebas Neue',sans-serif;font-size:46px;line-height:1;letter-spacing:.04em}
+.stat-card .label{font-size:12.5px;font-weight:600;opacity:.85;margin-top:4px;text-transform:uppercase;letter-spacing:.08em}
+.about-photos{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:170px;gap:14px}
+.photo-frame{background:var(--ice);border:1.5px dashed #B8C6E6;border-radius:16px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;color:var(--muted);font-weight:600;font-size:13px;text-align:center;overflow:hidden;position:relative}
+.photo-frame .ico{width:26px;height:26px;stroke:var(--blue2)}
+.photo-frame.tall{grid-row:span 2}
+.photo-frame img{width:100%;height:100%;object-fit:cover}
+@media(max-width:900px){.about-grid{grid-template-columns:1fr}}
+
+/* generic cards */
+.grid{display:grid;gap:20px;margin-top:44px}
+.g4{grid-template-columns:repeat(4,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g2{grid-template-columns:repeat(2,1fr)}
+@media(max-width:1000px){.g4{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:600px){.g4,.g3,.g2{grid-template-columns:1fr}}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:26px 22px;box-shadow:var(--shadow);transition:transform .25s,box-shadow .25s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-5px);box-shadow:0 24px 48px rgba(20,40,107,.14)}
+.card h3,.card h4{color:var(--navy);font-weight:800;font-size:17px;margin:14px 0 8px;line-height:1.3}
+.card p{color:var(--slate);font-size:14.5px}
+.ic-circle{width:64px;height:64px;border-radius:50%;background:var(--navy);display:grid;place-items:center;color:#fff}
+.ic-circle svg{width:30px;height:30px}
+.card.navy{background:var(--navy);border-color:var(--navy);color:#fff}
+.card.navy h3,.card.navy p{color:#fff}.card.navy p{opacity:.9}
+.card.navy .ic-circle{background:#fff;color:var(--navy)}
+.card .corner{position:absolute;right:-1px;top:-1px;border-style:solid;border-width:0 46px 46px 0;border-color:transparent var(--blue) transparent transparent}
+
+.objectives{padding:90px 0}
+.topics{padding:90px 0;background:#fff}
+.results{padding:90px 0}
+.results .card{text-align:center}
+.results .ic-circle{margin:0 auto}
+.profile{padding:90px 0;background:#fff}
+.profile .card{text-align:center}.profile .ic-circle{margin:0 auto}
+
+/* programme */
+.activities{padding:90px 0}
+.activities-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:18px;margin-top:44px}
+@media(max-width:1100px){.activities-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.activities-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.activities-grid{grid-template-columns:1fr}}
+.activity-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:22px 18px 20px;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:transform .25s}
+.activity-card:hover{transform:translateY(-5px)}
+.activity-number{position:absolute;right:14px;top:8px;font-family:'Bebas Neue',sans-serif;font-size:44px;color:var(--sky);line-height:1}
+.activity-icon{width:46px;height:46px;border-radius:12px;background:var(--navy);color:#fff;display:grid;place-items:center}
+.activity-icon svg{width:24px;height:24px}
+.day-badge{display:inline-block;margin-top:14px;font-size:11.5px;font-weight:700;letter-spacing:.12em;text-transform:uppercase;color:var(--blue);background:var(--ice);padding:4px 10px;border-radius:999px}
+.activity-card h3{font-size:15.5px;color:var(--navy);margin:10px 0 6px;font-weight:800;line-height:1.3}
+.activity-card p{font-size:13.5px;color:var(--slate)}
+.breaks{margin-top:26px;text-align:center;color:var(--muted);font-size:13.5px}
+
+/* big type */
+.big-type{background:var(--navy);color:#fff;padding:80px 24px;text-align:center;overflow:hidden;position:relative}
+.big-type h2{font-family:'Bebas Neue',sans-serif;font-size:clamp(54px,11vw,150px);line-height:.9;letter-spacing:.03em}
+.big-type h2 .alt{color:#7FB0FF;display:inline-block;margin-left:.2em}
+.big-type h2 .small{display:block;font-family:'Poppins',sans-serif;font-size:clamp(14px,2vw,20px);font-weight:600;letter-spacing:.2em;text-transform:uppercase;opacity:.85;margin-top:18px}
+.big-type .tri{opacity:.35}
+
+/* teams */
+.teams{padding:90px 0;background:#fff}
+.teams-wrapper{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:44px}
+@media(max-width:1000px){.teams-wrapper{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:620px){.teams-wrapper{grid-template-columns:1fr}}
+.team-card{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow);border-top:6px solid var(--tc,var(--navy))}
+.team-header{padding:18px 20px 12px}
+.team-header h3{font-size:19px;font-weight:800;color:var(--navy)}
+.team-header .count{color:var(--muted);font-size:13px;font-weight:600}
+.team-photos{display:flex;flex-wrap:wrap;justify-content:center;gap:10px;padding:6px 16px 20px}
+.team-photo-slot{flex:0 0 calc(50% - 5px);max-width:150px;aspect-ratio:1;border-radius:14px;background:var(--ice);border:1.5px dashed #B8C6E6;display:flex;flex-direction:column;align-items:center;justify-content:center;color:var(--muted);font-size:12px;font-weight:600;overflow:hidden;position:relative}
+.team-photo-slot .plus{font-size:22px;color:var(--blue2);line-height:1}
+.team-photo-slot img{width:100%;height:100%;object-fit:cover}
+
+/* travel */
+.travel{padding:90px 0}
+.travel-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:36px;margin-top:40px;align-items:start}
+@media(max-width:900px){.travel-grid{grid-template-columns:1fr}}
+.travel-text p{color:var(--slate);margin-bottom:12px}
+.travel-text a{color:var(--blue);font-weight:700}
+.budget-table{width:100%;border-collapse:separate;border-spacing:0;background:#fff;border-radius:16px;overflow:hidden;box-shadow:var(--shadow);border:1px solid var(--line)}
+.budget-table th{background:var(--navy);color:#fff;padding:14px 16px;text-align:left;font-size:14px}
+.budget-table td{padding:13px 16px;border-top:1px solid var(--line);font-weight:600;color:var(--slate);font-size:15px}
+.budget-table td:nth-child(2){color:#0B8A4B}.budget-table td:nth-child(3){color:var(--navy)}
+.country-lists{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.country-box{background:var(--sky);border-radius:14px;padding:16px 18px}
+.country-box h4{color:var(--navy);font-size:14px;margin-bottom:6px;text-transform:uppercase;letter-spacing:.08em}
+.country-box ul{list-style:none}.country-box li{font-weight:600;color:var(--slate);font-size:14px;padding:2px 0}
+.country-box li::before{content:"•";color:var(--blue);margin-right:8px}
+.country-box.green{background:#E4F5EB}.country-box.green h4{color:#0B8A4B}.country-box.green li::before{color:#0B8A4B}
+
+/* accommodation */
+.stay{padding:90px 0;background:#fff}
+.stay-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center;margin-top:30px}
+@media(max-width:900px){.stay-grid{grid-template-columns:1fr}}
+.stay-text h3{color:var(--navy);font-size:22px;font-weight:800;margin-bottom:6px}
+.stay-text a.venue{color:var(--blue);font-weight:700}
+.services{list-style:none;margin-top:22px;display:grid;gap:12px}
+.services li{display:flex;align-items:center;gap:12px;font-weight:600;color:var(--slate)}
+.services li .ic-sm{width:40px;height:40px;border-radius:10px;background:var(--navy);color:#fff;display:grid;place-items:center;flex:0 0 40px}
+.services li .ic-sm svg{width:20px;height:20px}
+.stay-photos{display:grid;grid-template-columns:1fr 1fr;grid-auto-rows:190px;gap:14px}
+.stay-photos .photo-frame:first-child{grid-column:span 2}
+
+/* partners */
+.partners{padding:90px 0}
+.partners-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:40px}
+@media(max-width:900px){.partners-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.partners-grid{grid-template-columns:1fr}}
+.partner-card{background:#fff;border:1px solid var(--line);border-radius:14px;padding:20px 18px;box-shadow:var(--shadow);border-left:5px solid var(--navy);transition:transform .25s}
+.partner-card:hover{transform:translateY(-4px)}
+.partner-card .p-flag{font-size:28px;line-height:1}
+.partner-card h4{font-size:14.5px;color:var(--navy);margin:8px 0 3px;font-weight:700;line-height:1.35}
+.partner-card .p-role{color:var(--muted);font-size:12.5px;font-weight:600}
+
+/* gallery */
+.gallery{padding:90px 0;background:#fff}
+#photo-wall{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;margin-top:40px}
+@media(max-width:1000px){#photo-wall{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:560px){#photo-wall{grid-template-columns:repeat(2,1fr)}}
+.wall-item{position:relative;aspect-ratio:1;border-radius:14px;overflow:hidden;box-shadow:var(--shadow);background:var(--ice);cursor:zoom-in}
+.wall-item img{width:100%;height:100%;object-fit:cover;display:block}
+.remove-btn,.slot-remove{position:absolute;top:6px;right:6px;width:26px;height:26px;border:none;border-radius:50%;background:rgba(220,38,38,.95);color:#fff;font-size:12px;cursor:pointer;display:none;z-index:4;align-items:center;justify-content:center}
+body.editing .remove-btn,body.editing .slot-remove{display:flex}
+#wall-empty{display:none;text-align:center;color:var(--muted);padding:40px;border:1.5px dashed #B8C6E6;border-radius:16px;margin-top:40px}
+.gallery-actions{text-align:center;margin-top:30px}
+#add-photo-btn{display:none;font-weight:700;background:linear-gradient(90deg,var(--navy),var(--blue));color:#fff;border:none;padding:14px 28px;border-radius:12px;font-size:15px;cursor:pointer;box-shadow:0 12px 26px rgba(30,86,217,.28);font-family:inherit}
+.wall-hint{color:var(--muted);font-size:13px;margin-top:12px}
+.lightbox{position:fixed;inset:0;background:rgba(5,10,30,.92);display:none;align-items:center;justify-content:center;z-index:2000}
+.lightbox.open{display:flex}
+.lightbox img{max-width:92vw;max-height:86vh;border-radius:12px;box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.lightbox button{position:absolute;background:rgba(255,255,255,.12);color:#fff;border:none;font-size:30px;width:52px;height:52px;border-radius:50%;cursor:pointer}
+.lightbox .lb-close{top:18px;right:18px}.lightbox .lb-prev{left:16px;top:50%;transform:translateY(-50%)}.lightbox .lb-next{right:16px;top:50%;transform:translateY(-50%)}
+.lightbox .lb-count{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);color:#fff;font-weight:600;font-size:13px;letter-spacing:.1em}
+
+/* connect */
+.connect{background:var(--navy2);color:#fff;padding:90px 24px;text-align:center;position:relative;overflow:hidden}
+.connect::before{content:"";position:absolute;inset:0;background-image:linear-gradient(rgba(255,255,255,.06) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.06) 1px,transparent 1px);background-size:40px 40px;mask-image:radial-gradient(120% 100% at 50% 0%,#000 20%,transparent 75%)}
+.connect>*{position:relative}
+.connect h2{font-size:clamp(34px,5vw,56px);font-weight:900;text-transform:uppercase;line-height:1}
+.connect h2 span{color:#7FB0FF}
+.connect p{color:#C9D6F5;max-width:620px;margin:16px auto 0}
+.connect-buttons{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;margin-top:34px}
+.cbtn{display:inline-flex;align-items:center;gap:10px;background:#fff;color:var(--navy);text-decoration:none;font-weight:700;padding:13px 22px;border-radius:12px;transition:transform .2s}
+.cbtn:hover{transform:translateY(-3px)}
+.cbtn svg{width:20px;height:20px}
+.connect .vmdo-poster{width:150px;margin:36px auto 0;border-radius:12px;box-shadow:0 20px 40px rgba(0,0,0,.4)}
+.footer-line{background:#07133A;color:#9FB0D8;text-align:center;padding:22px 24px;font-size:12.5px}
+.footer-line strong{color:#fff}
+
+/* reveal */
+.reveal{opacity:0;transform:translateY(22px);transition:opacity .7s,transform .7s}
+.reveal.in{opacity:1;transform:none}
+
+/* edit toolbar */
+.edit-toolbar{position:fixed;bottom:18px;right:18px;z-index:1500;display:flex;align-items:center;gap:8px;background:var(--navy2);padding:8px 10px;border-radius:14px;box-shadow:0 14px 34px rgba(0,0,0,.35)}
+.edit-toolbar button{font-family:inherit;font-weight:700;border:none;border-radius:10px;padding:10px 16px;cursor:pointer;background:var(--blue);color:#fff;font-size:14px}
+#toggle-edit.active{background:#DC2626}
+#undo-btn,#redo-btn{display:none;font-size:16px;padding:9px 13px;background:#2E4A9C}
+#undo-btn:disabled,#redo-btn:disabled{opacity:.35;cursor:default}
+#edit-status{color:#9FB4E8;font-size:12.5px;font-weight:600;max-width:220px}
+body.editing [contenteditable="true"]{outline:2px dashed var(--blue2);outline-offset:3px;border-radius:4px;cursor:text;min-width:1ch}
+body.editing [contenteditable="true"]:focus{outline-color:#DC2626;background:rgba(255,255,255,.6)}
+body.editing .photo-frame,body.editing .team-photo-slot,body.editing .hero-photo{cursor:pointer;box-shadow:0 0 0 3px var(--blue2)}
+.back-top{position:fixed;left:18px;bottom:18px;width:44px;height:44px;border-radius:50%;background:#fff;color:var(--navy);border:1px solid var(--line);box-shadow:var(--shadow);display:none;place-items:center;cursor:pointer;z-index:1400}
+.back-top.show{display:grid}.back-top svg{width:20px;height:20px}
+</style>
+</head>
+<body>
+<div class="scroll-prog" id="scrollProg"></div>
+<nav class="nav"><div class="nav-inner">
+  <a class="nav-logo" href="#top"><span class="mark"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1h-2a2 2 0 0 0 0 4h2v1a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-1h2a2 2 0 0 0 0-4H4v-1a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><path d="M9 12h6M12 9v6"/></svg></span> PROMPTWISE</a>
+  <button class="nav-toggle" id="navToggle" aria-label="Menu"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+  <div class="nav-links" id="navLinks">
+    <a href="#about">About</a><a href="#objectives">Objectives</a><a href="#topics">Topics</a><a href="#programme">Programme</a>
+    <a href="#results">Results</a><a href="#teams">Teams</a><a href="#travel">Travel</a><a href="#stay">Stay</a><a href="#partners">Partners</a><a href="#gallery">Gallery</a><a href="#connect">Contact</a>
+  </div>
+</div></nav>
+
+<div class="eu-logobar top"><span class="eu-logo"><svg viewBox='0 0 212 60' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Co-funded by the European Union'><rect x='0' y='11.0' width='57' height='38' fill='#003399'/><polygon points='28.50,15.22 28.97,16.68 30.51,16.68 29.27,17.58 29.74,19.04 28.50,18.14 27.26,19.04 27.73,17.58 26.49,16.68 28.03,16.68' fill='#FFCC00'/><polygon points='34.83,16.92 35.31,18.38 36.84,18.38 35.60,19.28 36.07,20.74 34.83,19.84 33.59,20.74 34.07,19.28 32.83,18.38 34.36,18.38' fill='#FFCC00'/><polygon points='39.47,21.56 39.94,23.01 41.48,23.01 40.24,23.92 40.71,25.37 39.47,24.47 38.23,25.37 38.70,23.92 37.46,23.01 39.00,23.01' fill='#FFCC00'/><polygon points='41.17,27.89 41.64,29.35 43.17,29.35 41.93,30.25 42.41,31.71 41.17,30.81 39.93,31.71 40.40,30.25 39.16,29.35 40.69,29.35' fill='#FFCC00'/><polygon points='39.47,34.22 39.94,35.68 41.48,35.68 40.24,36.58 40.71,38.04 39.47,37.14 38.23,38.04 38.70,36.58 37.46,35.68 39.00,35.68' fill='#FFCC00'/><polygon points='34.83,38.86 35.31,40.32 36.84,40.32 35.60,41.22 36.07,42.68 34.83,41.78 33.59,42.68 34.07,41.22 32.83,40.32 34.36,40.32' fill='#FFCC00'/><polygon points='28.50,40.56 28.97,42.01 30.51,42.01 29.27,42.92 29.74,44.37 28.50,43.47 27.26,44.37 27.73,42.92 26.49,42.01 28.03,42.01' fill='#FFCC00'/><polygon points='22.17,38.86 22.64,40.32 24.17,40.32 22.93,41.22 23.41,42.68 22.17,41.78 20.93,42.68 21.40,41.22 20.16,40.32 21.69,40.32' fill='#FFCC00'/><polygon points='17.53,34.22 18.00,35.68 19.54,35.68 18.30,36.58 18.77,38.04 17.53,37.14 16.29,38.04 16.76,36.58 15.52,35.68 17.06,35.68' fill='#FFCC00'/><polygon points='15.83,27.89 16.31,29.35 17.84,29.35 16.60,30.25 17.07,31.71 15.83,30.81 14.59,31.71 15.07,30.25 13.83,29.35 15.36,29.35' fill='#FFCC00'/><polygon points='17.53,21.56 18.00,23.01 19.54,23.01 18.30,23.92 18.77,25.37 17.53,24.47 16.29,25.37 16.76,23.92 15.52,23.01 17.06,23.01' fill='#FFCC00'/><polygon points='22.17,16.92 22.64,18.38 24.17,18.38 22.93,19.28 23.41,20.74 22.17,19.84 20.93,20.74 21.40,19.28 20.16,18.38 21.69,18.38' fill='#FFCC00'/><text x='71' y='28.0' font-family="Chakra Petch, Arial, sans-serif" font-size='14.5' font-weight='600' fill='#1a1a2e'>Co-funded by the</text><text x='71' y='46.0' font-family="Chakra Petch, Arial, sans-serif" font-size='14.5' font-weight='600' fill='#1a1a2e'>European Union</text></svg></span><span class="eu-logo"><svg version="1.1" viewBox="0 0 312.13 89.326" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   <defs>     <g id="et_a">       <g id="et_b">         <path id="et_g" transform="rotate(18 3.1569 -.5)" d="m0 0v1h0.5z"/>         <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_g"/>       </g>       <g id="et_c">         <use transform="rotate(72)" width="100%" height="100%" xlink:href="#et_b"/>         <use transform="rotate(144)" width="100%" height="100%" xlink:href="#et_b"/>       </g>       <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_c"/>     </g>   </defs>   <path d="m131.16 72.78h-18.53v-28.125h18.53v3.3245h-14.79v7.707h14.79v3.3242h-14.79v10.446h14.79v3.324" fill="#2765b2" stroke-width=".26458"/>   <path d="m148.52 55.56h-0.18885c-0.52885-0.12601-1.0418-0.21696-1.5392-0.27384-0.49773-0.0569-1.0864-0.0853-1.7661-0.0853-1.0957 0-2.1534 0.24276-3.1734 0.72729-1.0203 0.48522-2.0026 1.1115-2.9469 1.8798v14.978h-3.551v-21.099h3.551v3.1168c1.4102-1.1331 2.6538-1.9361 3.7306-2.4084 1.0765-0.47196 2.1749-0.70842 3.2962-0.70842 0.6168 0 1.0639 0.0162 1.3411 0.0476 0.27681 0.0311 0.6922 0.0913 1.2465 0.17893v3.646" fill="#2765b2" stroke-width=".26458"/>   <path d="m164.08 67.59v-5.8743c-1.0825 0.0624-2.3578 0.15775-3.8246 0.28268-1.4671 0.1261-2.6293 0.3089-3.4851 0.54806-1.02 0.29001-1.8448 0.74025-2.4745 1.3507-0.62971 0.61095-0.94424 1.4513-0.94424 2.5218 0 1.2086 0.36512 2.1188 1.0957 2.7294 0.73025 0.61081 1.8445 0.91569 3.343 0.91569 1.2468 0 2.3862-0.24209 3.4189-0.72654 1.0322-0.48525 1.9897-1.0673 2.8707-1.7473zm3.5327 5.194h-3.5327v-2.2473c-0.31454 0.21368-0.73951 0.51302-1.2746 0.89662-0.53546 0.38433-1.0547 0.68987-1.5584 0.91646-0.59166 0.2894-1.272 0.53179-2.0399 0.72697-0.7683 0.19546-1.6685 0.293-2.7009 0.293-1.902 0-3.5137-0.62968-4.8361-1.8888-1.3223-1.2595-1.9834-2.8649-1.9834-4.8167 0-1.5994 0.34295-2.8932 1.0295-3.8814 0.68593-0.98859 1.6649-1.7662 2.9371-2.3327 1.2846-0.56716 2.8263-0.95085 4.6276-1.1526 1.8008-0.20142 3.7335-0.35243 5.7986-0.45334v-0.54774c0-0.80526-0.14155-1.4733-0.42434-2.0025-0.28377-0.52824-0.6899-0.9443-1.2191-1.2466-0.50303-0.2894-1.1076-0.4845-1.8131-0.58539-0.70543-0.10054-1.442-0.15114-2.2099-0.15114-0.93199 0-1.9708 0.1227-3.1165 0.36843-1.1463 0.2454-2.33 0.60127-3.551 1.0669h-0.18918v-3.6076c0.69255-0.18852 1.6933-0.39656 3.0033-0.62341 1.3094-0.22655 2.6002-0.33967 3.8722-0.33967 1.4856 0 2.7794 0.1227 3.8814 0.36809 1.102 0.24538 2.0561 0.66476 2.8615 1.2564 0.79407 0.57944 1.398 1.3289 1.814 2.2473 0.4154 0.91974 0.62341 2.059 0.62341 3.4189v14.318" fill="#2765b2" stroke-width=".26458"/>   <path d="m188.18 66.7c0 1.9269-0.7964 3.5078-2.3892 4.7413-1.5938 1.2343-3.7687 1.8514-6.5262 1.8514-1.5617 0-2.9938-0.18617-4.2974-0.55759-1.3028-0.37144-2.3958-0.77684-3.2769-1.218v-3.9857h0.18852c1.1208 0.84376 2.3674 1.5141 3.7402 2.0115 1.3725 0.49805 2.6884 0.74609 3.9478 0.74609 1.5614 0 2.7829-0.25128 3.6639-0.75538 0.88172-0.50374 1.3226-1.2967 1.3226-2.3802 0-0.83042-0.23912-1.4605-0.71768-1.8888-0.4789-0.42762-1.398-0.79312-2.7575-1.0954-0.50403-0.11305-1.1615-0.24534-1.9741-0.39651-0.81195-0.15114-1.5521-0.31483-2.2195-0.49117-1.8508-0.49147-3.1639-1.2118-3.9383-2.1627-0.77444-0.95086-1.1615-2.1186-1.1615-3.5044 0-0.86878 0.17959-1.687 0.53811-2.4549 0.35917-0.7683 0.90355-1.4549 1.6341-2.0588 0.7048-0.59235 1.6021-1.0613 2.6919-1.4076 1.0891-0.34629 2.3075-0.51925 3.655-0.51925 1.2591 0 2.534 0.15445 3.8246 0.46236 1.2908 0.3089 2.3644 0.68363 3.221 1.1242v3.7968h-0.18885c-0.90686-0.66707-2.0088-1.231-3.306-1.6904-1.2971-0.46006-2.5681-0.68991-3.815-0.68991-1.2971 0-2.3925 0.24871-3.2864 0.74613-0.89495 0.49808-1.3418 1.2376-1.3418 2.2195 0 0.86879 0.27054 1.5237 0.81259 1.9642 0.52917 0.44119 1.3848 0.80036 2.5691 1.077 0.65418 0.15101 1.3881 0.30218 2.2 0.45333 0.81259 0.15115 1.4889 0.29001 2.031 0.41545 1.649 0.37804 2.921 1.0262 3.8156 1.9456 0.89397 0.93197 1.3408 2.166 1.3408 3.7018" fill="#2765b2" stroke-width=".26458"/>   <path d="m222.74 72.78h-3.5512v-12.013c0-0.90678-0.0407-1.782-0.1227-2.6257-0.082-0.84363-0.25499-1.5174-0.51924-2.021-0.29004-0.54136-0.70543-0.95014-1.2468-1.228-0.54107-0.27649-1.3223-0.41539-2.3422-0.41539-0.99483 0-1.9893 0.24871-2.9842 0.74612-0.99483 0.49808-1.9897 1.1304-2.9845 1.8983 0.0377 0.2902 0.0691 0.62686 0.0946 1.0104 0.0251 0.38434 0.038 0.76534 0.038 1.1434v13.505h-3.5518v-12.013c0-0.93199-0.0407-1.8163-0.1227-2.654-0.082-0.83704-0.25499-1.5074-0.51924-2.0115-0.29004-0.54139-0.70543-0.94753-1.2465-1.2184-0.54139-0.27053-1.3226-0.40613-2.3422-0.40613-0.9697 0-1.9427 0.23978-2.9186 0.71768-0.976 0.47858-1.9487 1.0898-2.9184 1.8326v15.753h-3.5507v-21.099h3.5507v2.3422c1.1086-0.91842 2.2129-1.6368 3.3152-2.153 1.102-0.51594 2.2761-0.77457 3.5229-0.77457 1.4354 0 2.6535 0.30228 3.655 0.90686 1.0011 0.60425 1.7473 1.442 2.2381 2.5122 1.436-1.2092 2.7453-2.0806 3.9288-2.6161 1.184-0.53547 2.4494-0.80301 3.797-0.80301 2.3167 0 4.0259 0.70215 5.1279 2.1058 1.102 1.4046 1.653 3.3655 1.653 5.8843v13.694" fill="#2765b2" stroke-width=".26458"/>   <path d="m245.11 72.78h-3.5507v-2.3422c-1.1969 0.94427-2.3422 1.6693-3.4375 2.1722-1.0957 0.50409-2.3048 0.75576-3.6272 0.75576-2.2162 0-3.9418-0.67694-5.1755-2.0306-1.2343-1.3534-1.8504-3.3398-1.8504-5.9592v-13.695h3.5507v12.013c0 1.0704 0.0503 1.9865 0.15114 2.7488 0.10087 0.76131 0.31454 1.4131 0.64193 1.9545 0.33999 0.55438 0.78118 0.95721 1.3223 1.2091 0.54139 0.25205 1.3282 0.37734 2.3611 0.37734 0.91911 0 1.9235-0.23898 3.0125-0.71765 1.0891-0.47813 2.1067-1.0891 3.0509-1.832v-15.754h3.5507v21.099" fill="#2765b2" stroke-width=".26458"/>   <path d="m265.85 66.7c0 1.9269-0.7964 3.5078-2.3895 4.7413-1.5928 1.2343-3.7682 1.8514-6.5259 1.8514-1.5614 0-2.994-0.18617-4.2971-0.55759-1.3034-0.37144-2.3958-0.77684-3.2777-1.218v-3.9857h0.18951c1.1205 0.84376 2.3674 1.5141 3.7399 2.0115 1.3722 0.49805 2.6879 0.74609 3.9476 0.74609 1.561 0 2.7829-0.25128 3.6645-0.75538 0.88106-0.50374 1.3223-1.2967 1.3223-2.3802 0-0.83042-0.23978-1.4605-0.71768-1.8888-0.47858-0.42762-1.398-0.79312-2.7583-1.0954-0.50371-0.11305-1.1615-0.24534-1.9735-0.39651-0.81259-0.15114-1.5521-0.31483-2.2195-0.49117-1.8511-0.49147-3.1639-1.2118-3.9383-2.1627s-1.1615-2.1186-1.1615-3.5044c0-0.86878 0.17892-1.687 0.53811-2.4549 0.35917-0.7683 0.90323-1.4549 1.6338-2.0588 0.70543-0.59235 1.6027-1.0613 2.6919-1.4076 1.0888-0.34629 2.3072-0.51925 3.6544-0.51925 1.2597 0 2.534 0.15445 3.8256 0.46236 1.2905 0.3089 2.3641 0.68363 3.2205 1.1242v3.7968h-0.18918c-0.9065-0.66707-2.0085-1.231-3.3052-1.6904-1.2971-0.46006-2.5691-0.68991-3.8158-0.68991-1.2968 0-2.3925 0.24871-3.2864 0.74613-0.89397 0.49808-1.3411 1.2376-1.3411 2.2195 0 0.86879 0.27088 1.5237 0.81195 1.9642 0.52917 0.44119 1.3858 0.80036 2.5691 1.077 0.65484 0.15101 1.3881 0.30218 2.2007 0.45333 0.81195 0.15115 1.4889 0.29001 2.0304 0.41545 1.6497 0.37804 2.9215 1.0262 3.8156 1.9456 0.89396 0.93197 1.3411 2.166 1.3411 3.7018" fill="#2765b2" stroke-width=".26458"/>   <path d="m295.59 61.98h-10.295v10.295h-3.1353v-10.295h-10.294v-3.0226h10.294v-10.294h3.1353v10.294h10.295v3.0226" fill="#2765b2" stroke-width=".26458"/>   <g transform="matrix(.10417 0 0 .10417 16.54 16.54)" stroke-width="2.54">     <rect width="810" height="540" fill="#2765b2"/>     <g transform="matrix(30,0,0,30,405,270)" fill="#fc0">       <use y="-6" width="100%" height="100%" xlink:href="#et_a"/>       <use y="6" width="100%" height="100%" xlink:href="#et_a"/>       <g id="et_f">         <use x="-6" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(216 -2.3442 -2.1107)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(144,-2.1107,-2.3442)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(72,-4.6626,-2.0759)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(72 -5.0759 .5335)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>       </g>       <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_f"/>     </g>   </g> </svg></span><span class="eu-logo vmdo"><img src="vmdo-logo.png" alt="VMDO"></span></div>
+
+<section class="hero geo" id="top">
+  <div class="tri a" style="left:-10px;top:40px"></div><div class="tri b" style="right:30px;top:120px"></div><div class="tri c" style="left:60%;top:30px"></div>
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge"><span class="dot"></span> Erasmus+ KA153 · Mobility of Youth Workers</div>
+      <h1>PromptWise<span>Writing for the Planet in the Digital Era</span></h1>
+      <p class="hero-subtitle">36 youth workers from 9 countries explore AI literacy, responsible prompt writing and sustainable digital habits, so that technology serves people and the planet.</p>
+      <div class="hero-details">
+        <div class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg> 15 – 24 October 2026</div>
+        <div class="hero-tag light"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg> Istanbul, Türkiye</div>
+        <div class="hero-tag"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg> 36 Participants</div>
+        <div class="hero-tag light"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><path d="M4 22v-7"/></svg> 9 Countries</div>
+      </div>
+      <div class="hero-flags">🇩🇪 🇹🇷 🇬🇷 🇵🇹 🇨🇿 🇮🇹 🇲🇰 🇷🇴 🇪🇸</div>
+    </div>
+    <div class="hero-photo" data-ckey="img_hero"><img src="hero-portrait.jpg" alt="PromptWise"><div class="tri a" style="right:-2px;bottom:-2px;transform:rotate(90deg)"></div></div>
+  </div>
+  <div class="hero-scroll">Scroll to explore<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m6 9 6 6 6-6"/></svg></div>
+</section>
+
+<section class="about" id="about"><div class="container"><div class="about-grid">
+  <div class="about-text reveal">
+    <span class="section-label">Project Introduction</span>
+    <h2 class="section-title">What is <span class="highlight">PromptWise</span>?</h2>
+    <p>PromptWise: Writing for the Planet in the Digital Era is an Erasmus+ Mobility of Youth Workers project that brings together 36 youth workers from Germany, Greece, Portugal, Czechia, Italy, North Macedonia, Romania, Spain and Türkiye to explore AI literacy, responsible digital practices and environmental sustainability.</p>
+    <p>The project addresses a growing gap in youth work: while AI tools are becoming mainstream, most practitioners lack the skills to use them critically, responsibly and sustainably.</p>
+    <p>Participants are empowered through non-formal education methods such as hands-on workshops, prompt-writing labs, reading circles, field interviews, creative campaigns and a study visit. They gain practical skills in AI literacy, prompt engineering, sustainable digital habits, algorithmic bias detection and project design.</p>
+    <p>Coordinated by <strong>VMDO – Verbund sozial-kultureller Migrantenvereine Dortmund e.V.</strong> (Germany) and funded by the Erasmus+ Programme of the European Union.</p>
+    <div class="about-stats">
+      <div class="stat-card"><div class="number">36</div><div class="label">Participants</div></div>
+      <div class="stat-card"><div class="number">9</div><div class="label">Countries</div></div>
+      <div class="stat-card"><div class="number">8</div><div class="label">Activity days</div></div>
+    </div>
+  </div>
+  <div class="about-photos reveal">
+    <div class="photo-frame" data-ckey="img_frame_0"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>Upload group photo</div>
+    <div class="photo-frame tall" data-ckey="img_frame_1"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>Upload activity photo</div>
+    <div class="photo-frame" data-ckey="img_frame_2"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 4h-5L7 7H4a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-3l-2.5-3z"/><circle cx="12" cy="13" r="3"/></svg>Upload team photo</div>
+  </div>
+</div></div></section>
+
+<section class="objectives geo" id="objectives">
+  <div class="tri b" style="left:0;top:0"></div><div class="tri a" style="right:0;bottom:0"></div>
+  <div class="container"><div class="center reveal"><span class="section-label">Why We're Here</span><h2 class="section-title">Project <span class="highlight">Objectives</span></h2>
+  <p class="lead">Four competence areas every participant works on during the training and carries back into daily youth work.</p></div>
+  <div class="grid g4"><div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1h-2a2 2 0 0 0 0 4h2v1a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-1h2a2 2 0 0 0 0-4H4v-1a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><path d="M9 12h6M12 9v6"/></svg></div><h3>AI Literacy</h3><p>Improve participants’ ability to use Artificial Intelligence tools critically, safely and responsibly within their youth work practice. Learn what AI can and cannot do, how to identify bias, and how to apply AI ethically.</p></div>
+<div class="card navy reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Prompt-Writing Competence</h3><p>Develop practical prompt-engineering skills that participants can apply immediately: designing effective prompts for session planning, creating learning materials, and adapting AI outputs to specific youth groups.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h3>Sustainable Digital Habits</h3><p>Connect AI use to its environmental impact. Understand how AI systems consume energy, water and raw materials, and commit to reducing digital waste through concrete, measurable behaviour changes.</p></div>
+<div class="card navy reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Inclusive &amp; Learner-Centred Methods</h3><p>Strengthen participants’ capacity to integrate digital tools in ways that are inclusive, accessible and learner-centred, so that technology serves people from all backgrounds, including those with fewer opportunities.</p></div></div></div>
+</section>
+
+<section class="topics" id="topics"><div class="container"><div class="center reveal"><span class="section-label">What We Explore</span><h2 class="section-title">Project <span class="highlight">Activities</span></h2>
+  <p class="lead">The building blocks of the programme, from the first prompt to the final campaign.</p></div>
+  <div class="grid g3"><div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1 0-5H20"/></svg></div><h3>PromptWise Toolkit</h3><p>Co-creating an Open Educational Resource for youth workers: modules, prompt templates, reflection tools and sustainability guidelines.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><h3>Prompt Writing</h3><p>Designing, testing and refining prompts for youth work purposes: context, task, format, tone and ethics.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><h3>Bias &amp; Digital Citizenship</h3><p>Identifying and addressing algorithmic bias in AI systems and practising critical, ethical use.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><h3>Digital Sustainability</h3><p>Exploring the environmental footprint of AI (energy, water, e-waste) and how to minimise it.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><h3>“One Prompt, One Planet”</h3><p>A creative awareness campaign made by participants and tested with local people.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a14.5 14.5 0 0 0 0 20 14.5 14.5 0 0 0 0-20"/><path d="M2 12h20"/></svg></div><h3>Erasmus+ &amp; Youthpass</h3><p>Discovering the programme, reflecting daily on learning and recognising competences with Youthpass.</p></div></div></div></section>
+
+<section class="activities geo" id="programme">
+  <div class="tri c" style="left:0;top:40px"></div>
+  <div class="container"><div class="center reveal"><span class="section-label">Our Journey</span><h2 class="section-title">What We'll <span class="highlight">Do</span></h2>
+  <p class="lead">8 activity days plus 2 travel days of hands-on learning, intercultural exchange and digital skill-building in Istanbul.</p></div>
+  <div class="activities-grid"><div class="activity-card reveal"><div class="activity-number">01</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div><div class="day-badge">Arrival</div><h3>Arrival in Istanbul</h3><p>Participants arrive from all nine countries, check in at the hotel and meet the team over dinner.</p></div>
+<div class="activity-card reveal"><div class="activity-number">02</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M18 11V6a2 2 0 0 0-4 0v5"/><path d="M14 10V4a2 2 0 0 0-4 0v2"/><path d="M10 10.5V6a2 2 0 0 0-4 0v8"/><path d="M18 8a2 2 0 1 1 4 0v6a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg></div><div class="day-badge">Day 1</div><h3>Welcome &amp; Getting to Know</h3><p>Opening of the training, name games, team building, mapping expectations, ground rules, the Erasmus+ world café and a city hunt. Welcome night.</p></div>
+<div class="activity-card reveal"><div class="activity-number">03</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a4 4 0 0 1 4 4v1h1a3 3 0 0 1 3 3v1h-2a2 2 0 0 0 0 4h2v1a3 3 0 0 1-3 3h-1v1a4 4 0 0 1-8 0v-1H7a3 3 0 0 1-3-3v-1h2a2 2 0 0 0 0-4H4v-1a3 3 0 0 1 3-3h1V6a4 4 0 0 1 4-4z"/><path d="M9 12h6M12 9v6"/></svg></div><div class="day-badge">Day 2</div><h3>Exploring AI</h3><p>“How AI works in simple terms”, Step Forward If…, the Human vs. Machine game, national realities survey and our digital footprints. Intercultural night 1.</p></div>
+<div class="activity-card reveal"><div class="activity-number">04</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 0 1 3 3L7 19l-4 1 1-4Z"/></svg></div><div class="day-badge">Day 3</div><h3>Anatomy of a Good Prompt</h3><p>Snowball discussion, the prompt-writing workshop, reading circles on sustainable AI, theatre plays and an eco-audit walk. Intercultural night 2.</p></div>
+<div class="activity-card reveal"><div class="activity-number">05</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><div class="day-badge">Day 4</div><h3>Eco-Digital Practices</h3><p>Reducing data waste and greener cloud habits, Prompt Studios with dot-voting, study visit to Deneyap Atölyeleri and mid-term evaluation.</p></div>
+<div class="activity-card reveal"><div class="activity-number">06</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><div class="day-badge">Day 5</div><h3>AI Literacy &amp; Storytelling</h3><p>Jigsaw learning on AI literacy, the simulation game “The Algorithm Decides”, prompt and context engineering, digital storytelling and a dinner in nature.</p></div>
+<div class="activity-card reveal"><div class="activity-number">07</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 11 18-5v12L3 14v-3z"/><path d="M11.6 16.8a3 3 0 1 1-5.8-1.6"/></svg></div><div class="day-badge">Day 6</div><h3>One Prompt, One Planet</h3><p>Designing campaign materials, testing them with local people and street interviews, guest speaker on green AI, movie night.</p></div>
+<div class="activity-card reveal"><div class="activity-number">08</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div><div class="day-badge">Day 7</div><h3>Project Factory &amp; Design Sprint</h3><p>New Erasmus+ project ideas, dissemination planning and a design sprint to finalise the PromptWise Toolkit and the Workshop Replication Plan.</p></div>
+<div class="activity-card reveal"><div class="activity-number">09</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"/></svg></div><div class="day-badge">Day 8</div><h3>Evaluation &amp; Youthpass</h3><p>What have we done together, final evaluation, the Youthpass ceremony and the goodbye evening.</p></div>
+<div class="activity-card reveal"><div class="activity-number">10</div><div class="activity-icon"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M17.8 19.2 16 11l3.5-3.5C21 6 21.5 4 21 3c-1-.5-3 0-4.5 1.5L13 8 4.8 6.2c-.5-.1-.9.1-1.1.5l-.3.5c-.2.5-.1 1 .3 1.3L9 12l-2 3H4l-1 1 3 2 2 3 1-1v-3l3-2 3.5 5.3c.3.4.8.5 1.3.3l.5-.2c.4-.3.6-.7.5-1.2z"/></svg></div><div class="day-badge">Departure</div><h3>Journey Home</h3><p>Final goodbyes and departure from Istanbul with new skills, friends and a plan for the follow-up at home.</p></div></div>
+  <p class="breaks">Every day has two coffee breaks (11:30 and 16:30), a daily reflection session at 18:00 and an evening programme.</p>
+  </div>
+</section>
+
+<section class="big-type">
+  <div class="tri a" style="left:-20px;top:-20px;border-width:0 0 200px 200px"></div><div class="tri a" style="right:-20px;bottom:-20px;border-width:0 0 200px 200px;transform:rotate(180deg)"></div>
+  <h2>Writing for the<span class="alt">Planet</span><br>One Prompt at a Time<span class="small">#PromptWiseEU · #OnePromptOnePlanet</span></h2>
+</section>
+
+<section class="results" id="results"><div class="container"><div class="center reveal"><span class="section-label">Expected Results</span><h2 class="section-title">What You Take <span class="highlight">Home</span></h2>
+  <p class="lead">By the end of the PromptWise training, every participant will have made measurable progress across four areas of competence, during and after the activity.</p></div>
+  <div class="grid g4"><div class="card reveal"><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.96-3.08 3 3 0 0 1-.34-5.58 2.5 2.5 0 0 1 1.32-4.24 2.5 2.5 0 0 1 4.44-1.04Z"/><path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.96-3.08 3 3 0 0 0 .34-5.58 2.5 2.5 0 0 0-1.32-4.24 2.5 2.5 0 0 0-4.44-1.04Z"/></svg></div><p style="margin-top:16px;font-weight:600;color:var(--navy)">A solid understanding of how AI tools work, including their capabilities, limitations and ethical implications.</p></div>
+<div class="card reveal"><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/><path d="M9 18h6"/><path d="M10 22h4"/></svg></div><p style="margin-top:16px;font-weight:600;color:var(--navy)">Practical prompt-engineering skills: the ability to write, test and refine prompts for a wide range of youth work purposes.</p></div>
+<div class="card reveal"><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"/><path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"/></svg></div><p style="margin-top:16px;font-weight:600;color:var(--navy)">Knowledge of AI’s environmental footprint (energy consumption, water usage, e-waste) and how to minimise it.</p></div>
+<div class="card reveal"><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m16 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="m2 16 3-8 3 8c-.87.65-1.92 1-3 1s-2.13-.35-3-1Z"/><path d="M7 21h10"/><path d="M12 3v18"/><path d="M3 7h2c2 0 5-1 7-2 2 1 5 2 7 2h2"/></svg></div><p style="margin-top:16px;font-weight:600;color:var(--navy)">Awareness of algorithmic bias and strategies to counteract it in your professional practice.</p></div></div></div></section>
+
+<section class="profile geo" id="profile">
+  <div class="tri b" style="right:0;top:0;transform:scaleX(-1)"></div>
+  <div class="container"><div class="center reveal"><span class="section-label">Target Groups</span><h2 class="section-title">Participant <span class="highlight">Profile</span></h2>
+  <p class="lead">Who the training is for and what we expect from every participant.</p></div>
+  <div class="grid g4"><div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="m3 6 6-3 6 3 6-3v15l-6 3-6-3-6 3Z"/><path d="M9 3v15"/><path d="M15 6v15"/></svg></div><h3>Partner countries</h3><p>Participants are selected from Germany, Greece, Portugal, Czechia, Italy, North Macedonia, Romania, Spain and Türkiye.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="14" x="2" y="5" rx="2"/><circle cx="8" cy="12" r="2.5"/><path d="M14 10h5M14 14h5"/></svg></div><h3>Age 18+</h3><p>Participants must be at least 18 years old. Apart from this minimum, there is no upper age limit.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg></div><h3>Active in youth work</h3><p>Youth workers, youth leaders, trainers and other professionals interested in non-formal education and the project’s key themes.</p></div>
+<div class="card reveal"><div class="corner"></div><div class="ic-circle"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/><circle cx="12" cy="10" r="3"/></svg></div><h3>36 participants</h3><p>4 youth workers from each participating country, actively engaged in non-formal education, youth support and community-based youth work.</p></div></div></div>
+</section>
+
+<section class="teams" id="teams"><div class="container"><div class="center reveal"><span class="section-label">Our Teams</span><h2 class="section-title">Meet the <span class="highlight">People</span></h2>
+  <p class="lead">36 youth workers from 9 countries, each bringing a unique perspective to the table. Click a slot in Edit Mode to add a photo.</p></div>
+  <div class="teams-wrapper"><div class="team-card reveal" style="--tc:#111111"><div class="team-header"><h3>🇩🇪 Germany</h3><div class="count">4 Participants · Coordinator</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_de_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_de_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_de_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_de_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#E30A17"><div class="team-header"><h3>🇹🇷 Türkiye</h3><div class="count">4 Participants · Host Country</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_tr_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_tr_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_tr_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_tr_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#0D5EAF"><div class="team-header"><h3>🇬🇷 Greece</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_gr_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_gr_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_gr_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_gr_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#006600"><div class="team-header"><h3>🇵🇹 Portugal</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_pt_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_pt_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_pt_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_pt_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#11457E"><div class="team-header"><h3>🇨🇿 Czechia</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_cz_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_cz_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_cz_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_cz_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#009246"><div class="team-header"><h3>🇮🇹 Italy</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_it_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_it_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_it_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_it_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#D20000"><div class="team-header"><h3>🇲🇰 North Macedonia</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_mk_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_mk_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_mk_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_mk_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#F6C915"><div class="team-header"><h3>🇷🇴 Romania</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_ro_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_ro_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_ro_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_ro_4"><span class="plus">+</span>Photo 4</div></div></div>
+<div class="team-card reveal" style="--tc:#AA151B"><div class="team-header"><h3>🇪🇸 Spain</h3><div class="count">4 Participants</div></div><div class="team-photos"><div class="team-photo-slot" data-ckey="img_es_1"><span class="plus">+</span>Photo 1</div><div class="team-photo-slot" data-ckey="img_es_2"><span class="plus">+</span>Photo 2</div><div class="team-photo-slot" data-ckey="img_es_3"><span class="plus">+</span>Photo 3</div><div class="team-photo-slot" data-ckey="img_es_4"><span class="plus">+</span>Photo 4</div></div></div>
+</div></div></section>
+
+<section class="travel geo" id="travel">
+  <div class="tri a" style="left:-10px;bottom:0"></div>
+  <div class="container"><div class="center reveal"><span class="section-label">Budget</span><h2 class="section-title">Travel &amp; <span class="highlight">Reimbursement</span></h2>
+  <p class="lead">Travel costs are reimbursed up to the Erasmus+ distance-band limits after the activity, against original tickets, invoices and boarding passes.</p></div>
+  <div class="travel-grid">
+    <div class="travel-text reveal">
+      <p>Green Travel countries should travel by bus, train or other means of green travel.</p>
+      <p>You can calculate your distance with the <a href="https://erasmus-plus.ec.europa.eu/resources-and-tools/distance-calculator" target="_blank" rel="noopener">official Erasmus+ distance calculator</a>.</p>
+      <p>All tickets must be confirmed by the hosting organisation before purchase. For more details please contact your sending organisation.</p>
+      <div class="country-lists">
+        <div class="country-box green"><h4>Green Travel Countries</h4><ul><li>Türkiye</li><li>North Macedonia</li><li>Romania</li><li>Bulgaria</li><li>Greece</li></ul></div>
+        <div class="country-box"><h4>Standard Travel Countries</h4><ul><li>Germany</li><li>Spain</li><li>Czechia</li></ul></div>
+      </div>
+    </div>
+    <div class="reveal"><table class="budget-table"><thead><tr><th>Travel distance</th><th>Green travel</th><th>Non-green travel</th></tr></thead><tbody><tr><td>10 – 99 km</td><td>56 EUR</td><td>28 EUR</td></tr>
+<tr><td>100 – 499 km</td><td>285 EUR</td><td>211 EUR</td></tr>
+<tr><td>500 – 1999 km</td><td>417 EUR</td><td>309 EUR</td></tr></tbody></table></div>
+  </div></div>
+</section>
+
+<section class="stay" id="stay"><div class="container"><div class="center reveal"><span class="section-label">Accommodation</span><h2 class="section-title">Where We <span class="highlight">Stay</span></h2></div>
+  <div class="stay-grid">
+    <div class="stay-text reveal">
+      <h3>The project will be implemented in</h3>
+      <p><a class="venue" href="https://www.google.com/maps/search/La+Quinta+by+Wyndham+Istanbul+Gunesli" target="_blank" rel="noopener">La Quinta by Wyndham Istanbul Gunesli</a> (click for the location)</p>
+      <ul class="services">
+        <li><span class="ic-sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 13a10 10 0 0 1 14 0"/><path d="M8.5 16.5a5 5 0 0 1 7 0"/><path d="M2 8.82a15 15 0 0 1 20 0"/><circle cx="12" cy="20" r="1"/></svg></span><span>WiFi access in all rooms and common areas</span></li>
+        <li><span class="ic-sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M2 4v16"/><path d="M2 8h18a2 2 0 0 1 2 2v10"/><path d="M2 17h20"/><path d="M6 8v9"/></svg></span><span>Participants are hosted in quadruple rooms</span></li>
+        <li><span class="ic-sm"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 2v7c0 1.1.9 2 2 2h4a2 2 0 0 0 2-2V2"/><path d="M7 2v20"/><path d="M21 15V2a5 5 0 0 0-5 5v6c0 1.1.9 2 2 2h3Zm0 0v7"/></svg></span><span>Three meals and two coffee breaks daily</span></li>
+      </ul>
+    </div>
+    <div class="stay-photos reveal">
+      <div class="photo-frame" data-ckey="img_hotel_1"><img src="hotel-room.jpg" alt="Hotel room"></div>
+      <div class="photo-frame" data-ckey="img_hotel_2"><img src="hotel-conference.jpg" alt="Conference room"></div>
+      <div class="photo-frame" data-ckey="img_hotel_3"><img src="hotel-pool.jpg" alt="Pool"></div>
+    </div>
+  </div></div></section>
+
+<section class="partners geo" id="partners">
+  <div class="tri c" style="right:0;top:0;transform:scaleX(-1)"></div>
+  <div class="container"><div class="center reveal"><span class="section-label">Consortium</span><h2 class="section-title">Our <span class="highlight">Partners</span></h2>
+  <p class="lead">Nine organisations from nine countries make PromptWise possible.</p></div>
+  <div class="partners-grid"><div class="partner-card reveal"><div class="p-flag">🇩🇪</div><h4>Verbund sozial-kultureller Migrantenvereine Dortmund e.V. (VMDO)</h4><div class="p-role">Germany · Coordinator</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇹🇷</div><h4>DADYA Youth Council</h4><div class="p-role">Türkiye · Host</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇬🇷</div><h4>Verde: Research Center for Innovation and Sustainable Development</h4><div class="p-role">Greece</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇵🇹</div><h4>ArtCaravel Unipessoal LDA</h4><div class="p-role">Portugal</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇨🇿</div><h4>Help People, z. s.</h4><div class="p-role">Czechia</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇮🇹</div><h4>RED - BLUE BEETLE</h4><div class="p-role">Italy</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇲🇰</div><h4>Opshtinsko sredno tehnichko uchilishte Gostivar</h4><div class="p-role">North Macedonia</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇷🇴</div><h4>Casa de Cultura Ion Luca Caragiale a Municipiului Ploiesti</h4><div class="p-role">Romania</div></div>
+<div class="partner-card reveal"><div class="p-flag">🇪🇸</div><h4>Asociación para la Innovación en el Trabajo Juvenil en Red YOUTH HUB</h4><div class="p-role">Spain</div></div></div></div>
+</section>
+
+<section class="gallery" id="gallery"><div class="container"><div class="center reveal"><span class="section-label">Memories</span><h2 class="section-title">Photo <span class="highlight">Gallery</span></h2>
+  <p class="lead">Moments from the training. Click a photo to enlarge it.</p></div>
+  <div id="photo-wall"></div>
+  <div id="wall-empty">No photos yet. Use the button below to add the first ones.</div>
+  <div class="gallery-actions"><button id="add-photo-btn" type="button">&#x2795; Add photos to the wall</button><div class="wall-hint">In Edit Mode you can add as many photos as you like. Everyone sees them.</div></div>
+</div></section>
+
+<section class="connect" id="connect">
+  <h2>Keep in Touch <span>With Us!</span></h2>
+  <p>Questions about travel, the programme or the toolkit? Reach the coordinating team at VMDO.</p>
+  <div class="connect-buttons">
+    <a class="cbtn" href="https://www.vmdo.de" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>www.vmdo.de</span></a>
+    <a class="cbtn" href="mailto:erasmus@vmdo.de?subject=PromptWise"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg><span>erasmus@vmdo.de</span></a>
+    <a class="cbtn" href="https://www.instagram.com/vmdointernational" target="_blank" rel="noopener"><svg class="ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="20" x="2" y="2" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg><span>@vmdointernational</span></a>
+  </div>
+  <img class="vmdo-poster" src="vmdo-poster.jpg" alt="VMDO – Gemeinsam Vielfalt Leben">
+</section>
+<div class="eu-logobar bottom"><span class="eu-logo"><svg viewBox='0 0 212 60' xmlns='http://www.w3.org/2000/svg' role='img' aria-label='Co-funded by the European Union'><rect x='0' y='11.0' width='57' height='38' fill='#003399'/><polygon points='28.50,15.22 28.97,16.68 30.51,16.68 29.27,17.58 29.74,19.04 28.50,18.14 27.26,19.04 27.73,17.58 26.49,16.68 28.03,16.68' fill='#FFCC00'/><polygon points='34.83,16.92 35.31,18.38 36.84,18.38 35.60,19.28 36.07,20.74 34.83,19.84 33.59,20.74 34.07,19.28 32.83,18.38 34.36,18.38' fill='#FFCC00'/><polygon points='39.47,21.56 39.94,23.01 41.48,23.01 40.24,23.92 40.71,25.37 39.47,24.47 38.23,25.37 38.70,23.92 37.46,23.01 39.00,23.01' fill='#FFCC00'/><polygon points='41.17,27.89 41.64,29.35 43.17,29.35 41.93,30.25 42.41,31.71 41.17,30.81 39.93,31.71 40.40,30.25 39.16,29.35 40.69,29.35' fill='#FFCC00'/><polygon points='39.47,34.22 39.94,35.68 41.48,35.68 40.24,36.58 40.71,38.04 39.47,37.14 38.23,38.04 38.70,36.58 37.46,35.68 39.00,35.68' fill='#FFCC00'/><polygon points='34.83,38.86 35.31,40.32 36.84,40.32 35.60,41.22 36.07,42.68 34.83,41.78 33.59,42.68 34.07,41.22 32.83,40.32 34.36,40.32' fill='#FFCC00'/><polygon points='28.50,40.56 28.97,42.01 30.51,42.01 29.27,42.92 29.74,44.37 28.50,43.47 27.26,44.37 27.73,42.92 26.49,42.01 28.03,42.01' fill='#FFCC00'/><polygon points='22.17,38.86 22.64,40.32 24.17,40.32 22.93,41.22 23.41,42.68 22.17,41.78 20.93,42.68 21.40,41.22 20.16,40.32 21.69,40.32' fill='#FFCC00'/><polygon points='17.53,34.22 18.00,35.68 19.54,35.68 18.30,36.58 18.77,38.04 17.53,37.14 16.29,38.04 16.76,36.58 15.52,35.68 17.06,35.68' fill='#FFCC00'/><polygon points='15.83,27.89 16.31,29.35 17.84,29.35 16.60,30.25 17.07,31.71 15.83,30.81 14.59,31.71 15.07,30.25 13.83,29.35 15.36,29.35' fill='#FFCC00'/><polygon points='17.53,21.56 18.00,23.01 19.54,23.01 18.30,23.92 18.77,25.37 17.53,24.47 16.29,25.37 16.76,23.92 15.52,23.01 17.06,23.01' fill='#FFCC00'/><polygon points='22.17,16.92 22.64,18.38 24.17,18.38 22.93,19.28 23.41,20.74 22.17,19.84 20.93,20.74 21.40,19.28 20.16,18.38 21.69,18.38' fill='#FFCC00'/><text x='71' y='28.0' font-family="Chakra Petch, Arial, sans-serif" font-size='14.5' font-weight='600' fill='#1a1a2e'>Co-funded by the</text><text x='71' y='46.0' font-family="Chakra Petch, Arial, sans-serif" font-size='14.5' font-weight='600' fill='#1a1a2e'>European Union</text></svg></span><span class="eu-logo"><svg version="1.1" viewBox="0 0 312.13 89.326" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">   <defs>     <g id="et_a">       <g id="et_b">         <path id="et_g" transform="rotate(18 3.1569 -.5)" d="m0 0v1h0.5z"/>         <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_g"/>       </g>       <g id="et_c">         <use transform="rotate(72)" width="100%" height="100%" xlink:href="#et_b"/>         <use transform="rotate(144)" width="100%" height="100%" xlink:href="#et_b"/>       </g>       <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_c"/>     </g>   </defs>   <path d="m131.16 72.78h-18.53v-28.125h18.53v3.3245h-14.79v7.707h14.79v3.3242h-14.79v10.446h14.79v3.324" fill="#2765b2" stroke-width=".26458"/>   <path d="m148.52 55.56h-0.18885c-0.52885-0.12601-1.0418-0.21696-1.5392-0.27384-0.49773-0.0569-1.0864-0.0853-1.7661-0.0853-1.0957 0-2.1534 0.24276-3.1734 0.72729-1.0203 0.48522-2.0026 1.1115-2.9469 1.8798v14.978h-3.551v-21.099h3.551v3.1168c1.4102-1.1331 2.6538-1.9361 3.7306-2.4084 1.0765-0.47196 2.1749-0.70842 3.2962-0.70842 0.6168 0 1.0639 0.0162 1.3411 0.0476 0.27681 0.0311 0.6922 0.0913 1.2465 0.17893v3.646" fill="#2765b2" stroke-width=".26458"/>   <path d="m164.08 67.59v-5.8743c-1.0825 0.0624-2.3578 0.15775-3.8246 0.28268-1.4671 0.1261-2.6293 0.3089-3.4851 0.54806-1.02 0.29001-1.8448 0.74025-2.4745 1.3507-0.62971 0.61095-0.94424 1.4513-0.94424 2.5218 0 1.2086 0.36512 2.1188 1.0957 2.7294 0.73025 0.61081 1.8445 0.91569 3.343 0.91569 1.2468 0 2.3862-0.24209 3.4189-0.72654 1.0322-0.48525 1.9897-1.0673 2.8707-1.7473zm3.5327 5.194h-3.5327v-2.2473c-0.31454 0.21368-0.73951 0.51302-1.2746 0.89662-0.53546 0.38433-1.0547 0.68987-1.5584 0.91646-0.59166 0.2894-1.272 0.53179-2.0399 0.72697-0.7683 0.19546-1.6685 0.293-2.7009 0.293-1.902 0-3.5137-0.62968-4.8361-1.8888-1.3223-1.2595-1.9834-2.8649-1.9834-4.8167 0-1.5994 0.34295-2.8932 1.0295-3.8814 0.68593-0.98859 1.6649-1.7662 2.9371-2.3327 1.2846-0.56716 2.8263-0.95085 4.6276-1.1526 1.8008-0.20142 3.7335-0.35243 5.7986-0.45334v-0.54774c0-0.80526-0.14155-1.4733-0.42434-2.0025-0.28377-0.52824-0.6899-0.9443-1.2191-1.2466-0.50303-0.2894-1.1076-0.4845-1.8131-0.58539-0.70543-0.10054-1.442-0.15114-2.2099-0.15114-0.93199 0-1.9708 0.1227-3.1165 0.36843-1.1463 0.2454-2.33 0.60127-3.551 1.0669h-0.18918v-3.6076c0.69255-0.18852 1.6933-0.39656 3.0033-0.62341 1.3094-0.22655 2.6002-0.33967 3.8722-0.33967 1.4856 0 2.7794 0.1227 3.8814 0.36809 1.102 0.24538 2.0561 0.66476 2.8615 1.2564 0.79407 0.57944 1.398 1.3289 1.814 2.2473 0.4154 0.91974 0.62341 2.059 0.62341 3.4189v14.318" fill="#2765b2" stroke-width=".26458"/>   <path d="m188.18 66.7c0 1.9269-0.7964 3.5078-2.3892 4.7413-1.5938 1.2343-3.7687 1.8514-6.5262 1.8514-1.5617 0-2.9938-0.18617-4.2974-0.55759-1.3028-0.37144-2.3958-0.77684-3.2769-1.218v-3.9857h0.18852c1.1208 0.84376 2.3674 1.5141 3.7402 2.0115 1.3725 0.49805 2.6884 0.74609 3.9478 0.74609 1.5614 0 2.7829-0.25128 3.6639-0.75538 0.88172-0.50374 1.3226-1.2967 1.3226-2.3802 0-0.83042-0.23912-1.4605-0.71768-1.8888-0.4789-0.42762-1.398-0.79312-2.7575-1.0954-0.50403-0.11305-1.1615-0.24534-1.9741-0.39651-0.81195-0.15114-1.5521-0.31483-2.2195-0.49117-1.8508-0.49147-3.1639-1.2118-3.9383-2.1627-0.77444-0.95086-1.1615-2.1186-1.1615-3.5044 0-0.86878 0.17959-1.687 0.53811-2.4549 0.35917-0.7683 0.90355-1.4549 1.6341-2.0588 0.7048-0.59235 1.6021-1.0613 2.6919-1.4076 1.0891-0.34629 2.3075-0.51925 3.655-0.51925 1.2591 0 2.534 0.15445 3.8246 0.46236 1.2908 0.3089 2.3644 0.68363 3.221 1.1242v3.7968h-0.18885c-0.90686-0.66707-2.0088-1.231-3.306-1.6904-1.2971-0.46006-2.5681-0.68991-3.815-0.68991-1.2971 0-2.3925 0.24871-3.2864 0.74613-0.89495 0.49808-1.3418 1.2376-1.3418 2.2195 0 0.86879 0.27054 1.5237 0.81259 1.9642 0.52917 0.44119 1.3848 0.80036 2.5691 1.077 0.65418 0.15101 1.3881 0.30218 2.2 0.45333 0.81259 0.15115 1.4889 0.29001 2.031 0.41545 1.649 0.37804 2.921 1.0262 3.8156 1.9456 0.89397 0.93197 1.3408 2.166 1.3408 3.7018" fill="#2765b2" stroke-width=".26458"/>   <path d="m222.74 72.78h-3.5512v-12.013c0-0.90678-0.0407-1.782-0.1227-2.6257-0.082-0.84363-0.25499-1.5174-0.51924-2.021-0.29004-0.54136-0.70543-0.95014-1.2468-1.228-0.54107-0.27649-1.3223-0.41539-2.3422-0.41539-0.99483 0-1.9893 0.24871-2.9842 0.74612-0.99483 0.49808-1.9897 1.1304-2.9845 1.8983 0.0377 0.2902 0.0691 0.62686 0.0946 1.0104 0.0251 0.38434 0.038 0.76534 0.038 1.1434v13.505h-3.5518v-12.013c0-0.93199-0.0407-1.8163-0.1227-2.654-0.082-0.83704-0.25499-1.5074-0.51924-2.0115-0.29004-0.54139-0.70543-0.94753-1.2465-1.2184-0.54139-0.27053-1.3226-0.40613-2.3422-0.40613-0.9697 0-1.9427 0.23978-2.9186 0.71768-0.976 0.47858-1.9487 1.0898-2.9184 1.8326v15.753h-3.5507v-21.099h3.5507v2.3422c1.1086-0.91842 2.2129-1.6368 3.3152-2.153 1.102-0.51594 2.2761-0.77457 3.5229-0.77457 1.4354 0 2.6535 0.30228 3.655 0.90686 1.0011 0.60425 1.7473 1.442 2.2381 2.5122 1.436-1.2092 2.7453-2.0806 3.9288-2.6161 1.184-0.53547 2.4494-0.80301 3.797-0.80301 2.3167 0 4.0259 0.70215 5.1279 2.1058 1.102 1.4046 1.653 3.3655 1.653 5.8843v13.694" fill="#2765b2" stroke-width=".26458"/>   <path d="m245.11 72.78h-3.5507v-2.3422c-1.1969 0.94427-2.3422 1.6693-3.4375 2.1722-1.0957 0.50409-2.3048 0.75576-3.6272 0.75576-2.2162 0-3.9418-0.67694-5.1755-2.0306-1.2343-1.3534-1.8504-3.3398-1.8504-5.9592v-13.695h3.5507v12.013c0 1.0704 0.0503 1.9865 0.15114 2.7488 0.10087 0.76131 0.31454 1.4131 0.64193 1.9545 0.33999 0.55438 0.78118 0.95721 1.3223 1.2091 0.54139 0.25205 1.3282 0.37734 2.3611 0.37734 0.91911 0 1.9235-0.23898 3.0125-0.71765 1.0891-0.47813 2.1067-1.0891 3.0509-1.832v-15.754h3.5507v21.099" fill="#2765b2" stroke-width=".26458"/>   <path d="m265.85 66.7c0 1.9269-0.7964 3.5078-2.3895 4.7413-1.5928 1.2343-3.7682 1.8514-6.5259 1.8514-1.5614 0-2.994-0.18617-4.2971-0.55759-1.3034-0.37144-2.3958-0.77684-3.2777-1.218v-3.9857h0.18951c1.1205 0.84376 2.3674 1.5141 3.7399 2.0115 1.3722 0.49805 2.6879 0.74609 3.9476 0.74609 1.561 0 2.7829-0.25128 3.6645-0.75538 0.88106-0.50374 1.3223-1.2967 1.3223-2.3802 0-0.83042-0.23978-1.4605-0.71768-1.8888-0.47858-0.42762-1.398-0.79312-2.7583-1.0954-0.50371-0.11305-1.1615-0.24534-1.9735-0.39651-0.81259-0.15114-1.5521-0.31483-2.2195-0.49117-1.8511-0.49147-3.1639-1.2118-3.9383-2.1627s-1.1615-2.1186-1.1615-3.5044c0-0.86878 0.17892-1.687 0.53811-2.4549 0.35917-0.7683 0.90323-1.4549 1.6338-2.0588 0.70543-0.59235 1.6027-1.0613 2.6919-1.4076 1.0888-0.34629 2.3072-0.51925 3.6544-0.51925 1.2597 0 2.534 0.15445 3.8256 0.46236 1.2905 0.3089 2.3641 0.68363 3.2205 1.1242v3.7968h-0.18918c-0.9065-0.66707-2.0085-1.231-3.3052-1.6904-1.2971-0.46006-2.5691-0.68991-3.8158-0.68991-1.2968 0-2.3925 0.24871-3.2864 0.74613-0.89397 0.49808-1.3411 1.2376-1.3411 2.2195 0 0.86879 0.27088 1.5237 0.81195 1.9642 0.52917 0.44119 1.3858 0.80036 2.5691 1.077 0.65484 0.15101 1.3881 0.30218 2.2007 0.45333 0.81195 0.15115 1.4889 0.29001 2.0304 0.41545 1.6497 0.37804 2.9215 1.0262 3.8156 1.9456 0.89396 0.93197 1.3411 2.166 1.3411 3.7018" fill="#2765b2" stroke-width=".26458"/>   <path d="m295.59 61.98h-10.295v10.295h-3.1353v-10.295h-10.294v-3.0226h10.294v-10.294h3.1353v10.294h10.295v3.0226" fill="#2765b2" stroke-width=".26458"/>   <g transform="matrix(.10417 0 0 .10417 16.54 16.54)" stroke-width="2.54">     <rect width="810" height="540" fill="#2765b2"/>     <g transform="matrix(30,0,0,30,405,270)" fill="#fc0">       <use y="-6" width="100%" height="100%" xlink:href="#et_a"/>       <use y="6" width="100%" height="100%" xlink:href="#et_a"/>       <g id="et_f">         <use x="-6" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(216 -2.3442 -2.1107)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(144,-2.1107,-2.3442)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(72,-4.6626,-2.0759)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>         <use transform="rotate(72 -5.0759 .5335)" width="100%" height="100%" stroke-width="2.54" xlink:href="#et_a"/>       </g>       <use transform="scale(-1,1)" width="100%" height="100%" xlink:href="#et_f"/>     </g>   </g> </svg></span><span class="eu-logo vmdo"><img src="vmdo-logo.png" alt="VMDO"></span></div>
+<div class="footer-line"><p><strong>PromptWise: Writing for the Planet in the Digital Era</strong> · Erasmus+ KA153 Mobility of Youth Workers · Funded by the European Union. Views and opinions expressed are those of the authors only and do not necessarily reflect those of the European Union or the National Agency. Neither the European Union nor the granting authority can be held responsible for them.</p></div>
+
+<div class="lightbox" id="lightbox"><button class="lb-close" id="lb-close">&times;</button><button class="lb-prev" id="lb-prev">&#8249;</button><img id="lb-img" alt=""><button class="lb-next" id="lb-next">&#8250;</button><div class="lb-count" id="lb-count"></div></div>
+<button class="back-top" id="backTop" aria-label="Back to top"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="m18 15-6-6-6 6"/></svg></button>
+<div class="edit-toolbar"><span id="edit-status"></span><button id="undo-btn" type="button" title="Undo">&#x21B6;</button><button id="redo-btn" type="button" title="Redo">&#x21B7;</button><button id="toggle-edit" type="button">&#x270F; Edit Mode</button></div>
+<script>
+let editMode=false;
+const editableSelectors=[
+  '.hero-badge','.hero h1','.hero-kicker','.hero-subtitle','.hero-tag','.hero-flags',
+  '.section-label','.section-title','.lead',
+  '.about-text p','.stat-card .number','.stat-card .label',
+  '.card h3','.card h4','.card p',
+  '.activity-card h3','.activity-card p','.activity-card .day-badge','.breaks',
+  '.big-type h2','.team-header h3','.team-header .count',
+  '.travel-text p','.budget-table th','.budget-table td','.country-box h4','.country-box li',
+  '.stay-text h3','.stay-text p','.services li span',
+  '.partner-card h4','.partner-card .p-role',
+  '.connect h2','.connect p','.cbtn span','.footer-line p'
+];
+const imageSelectors='.photo-frame, .team-photo-slot, .hero-photo';
+const EDIT_PASSWORD='PROMPT2026';
+const SB_URL='https://nwbvlyempbzzbjdjvjuq.supabase.co';
+const SB_KEY='sb_publishable_R03HEsUOB96R33cIpI3uMA_8S5dogJs';
+const KP='pw_';
+const SB_HEADERS={apikey:SB_KEY,Authorization:'Bearer '+SB_KEY};
+const IDLE='Edit mode on — changes save automatically';
+function setStatus(m){const s=document.getElementById('edit-status');if(s)s.textContent=m;}
+function flash(m,t){setStatus(m);setTimeout(()=>setStatus(editMode?IDLE:''),t||1500);}
+function assignKeys(){
+  editableSelectors.forEach((sel,si)=>document.querySelectorAll(sel).forEach((el,ei)=>{if(!el.hasAttribute('data-ckey'))el.setAttribute('data-ckey','t_'+si+'_'+ei);}));
+  document.querySelectorAll(imageSelectors).forEach((el,i)=>{if(!el.hasAttribute('data-ckey'))el.setAttribute('data-ckey','img_'+i);});
+}
+function renderImage(slot,url){
+  if(slot._ph===undefined)slot._ph=slot.innerHTML;
+  slot.innerHTML='';const img=document.createElement('img');img.src=url;img.alt='Photo';slot.appendChild(img);
+  slot.style.border='none';slot.style.padding='0';
+  const rb=document.createElement('button');rb.className='slot-remove';rb.type='button';rb.innerHTML='&#x2716;';rb.title='Remove photo';
+  rb.addEventListener('click',e=>{e.stopPropagation();removeSlotImage(slot);});slot.appendChild(rb);
+}
+function clearImageUI(slot){slot.innerHTML=(slot._ph!==undefined?slot._ph:'');slot.style.border='';slot.style.padding='';}
+async function sbDeleteRow(key){try{await fetch(SB_URL+'/rest/v1/content?key=eq.'+encodeURIComponent(KP+key),{method:'DELETE',headers:SB_HEADERS});}catch(e){}}
+async function doSetImage(slot,key,url){renderImage(slot,url+(url.indexOf('?')<0?'?t='+Date.now():''));await sbUpsert(key,'image',url);}
+async function doClearImage(slot,key){clearImageUI(slot);await sbDeleteRow(key);}
+async function removeSlotImage(slot){if(!editMode)return;const key=slot.getAttribute('data-ckey');if(!key)return;
+  if(!confirm('Remove this photo?'))return;const url=(slot.querySelector('img')||{}).src||null;
+  pushAction({t:'image',slot,key,prev:url,next:null});await doClearImage(slot,key);flash('Photo removed ✓');}
+let undoStack=[],redoStack=[];
+function refreshUndoButtons(){const u=document.getElementById('undo-btn'),r=document.getElementById('redo-btn');if(u)u.disabled=!undoStack.length;if(r)r.disabled=!redoStack.length;}
+function pushAction(a){undoStack.push(a);redoStack=[];refreshUndoButtons();}
+async function applyValue(a,v){if(a.t==='text'){if(a.el){a.el.innerHTML=v;await sbUpsert(a.key,'text',v);}}else if(a.t==='image'){if(v)await doSetImage(a.slot,a.key,v);else await doClearImage(a.slot,a.key);}}
+async function doUndo(){if(!undoStack.length)return;const a=undoStack.pop();await applyValue(a,a.prev);redoStack.push(a);refreshUndoButtons();flash('Undone ↶',1200);}
+async function doRedo(){if(!redoStack.length)return;const a=redoStack.pop();await applyValue(a,a.next);undoStack.push(a);refreshUndoButtons();flash('Redone ↷',1200);}
+async function sbUpsert(key,type,value){
+  try{const r=await fetch(SB_URL+'/rest/v1/content?on_conflict=key',{method:'POST',headers:{...SB_HEADERS,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates,return=minimal'},
+    body:JSON.stringify({key:KP+key,type,value,updated_at:new Date().toISOString()})});return r.ok;}catch(e){console.warn('save failed',e);return false;}
+}
+async function sbUploadImage(key,file){
+  try{const ext=(file.name.split('.').pop()||'jpg').toLowerCase().replace(/[^a-z0-9]/g,'')||'jpg';const path=KP+key+'_'+Date.now()+'.'+ext;
+    const r=await fetch(SB_URL+'/storage/v1/object/photos/'+path,{method:'POST',headers:{apikey:SB_KEY,Authorization:'Bearer '+SB_KEY,'Content-Type':file.type||'application/octet-stream'},body:file});
+    if(!r.ok){console.warn('upload failed',r.status);return null;}return SB_URL+'/storage/v1/object/public/photos/'+path;}catch(e){console.warn('upload error',e);return null;}
+}
+async function saveText(el){const key=el.getAttribute('data-ckey');if(!key)return;setStatus('Saving…');const ok=await sbUpsert(key,'text',el.innerHTML);setStatus(ok?'Saved ✓':'Save failed — check connection');if(ok)setTimeout(()=>setStatus(editMode?IDLE:''),1500);}
+async function loadContent(){
+  assignKeys();
+  try{const r=await fetch(SB_URL+'/rest/v1/content?select=key,type,value&key=like.'+KP+'*&order=key.asc',{headers:SB_HEADERS});if(!r.ok)return;const rows=await r.json();const map={};
+    rows.forEach(x=>{if(x.key&&x.key.indexOf(KP)===0)map[x.key.slice(KP.length)]=x;});
+    document.querySelectorAll('[data-ckey]').forEach(el=>{const x=map[el.getAttribute('data-ckey')];if(!x)return;if(x.type==='text')el.innerHTML=x.value;else if(x.type==='image'&&x.value)renderImage(el,x.value);});
+    renderWall(rows.filter(x=>x.type==='wall'&&x.value).map(x=>({key:x.key.slice(KP.length),value:x.value})));
+  }catch(e){console.warn('load failed',e);}
+}
+function pathFromUrl(url){const p=url.split('/storage/v1/object/public/photos/');return p[1]?p[1].split('?')[0]:null;}
+function makeWallItem(key,url){const item=document.createElement('div');item.className='wall-item';item.setAttribute('data-wallkey',key);
+  const img=document.createElement('img');img.src=url;img.alt='PromptWise photo';img.loading='lazy';item.appendChild(img);
+  item.addEventListener('click',()=>{if(!editMode)openLightbox(item);});
+  const b=document.createElement('button');b.className='remove-btn';b.innerHTML='&#x2716;';b.title='Remove photo';b.onclick=(e)=>{e.stopPropagation();removeWallPhoto(key,url,item);};item.appendChild(b);return item;}
+function renderWall(rows){const wall=document.getElementById('photo-wall');if(!wall)return;wall.innerHTML='';rows.forEach(r=>wall.appendChild(makeWallItem(r.key,r.value)));
+  const e=document.getElementById('wall-empty');if(e)e.style.display=(!rows.length&&editMode)?'block':'none';}
+function addWallPhoto(){if(!editMode)return;const input=document.createElement('input');input.type='file';input.accept='image/*';input.multiple=true;input.style.display='none';document.body.appendChild(input);
+  input.addEventListener('change',async(ev)=>{const files=[...ev.target.files];input.remove();if(!files.length)return;const wall=document.getElementById('photo-wall');const e=document.getElementById('wall-empty');if(e)e.style.display='none';
+    for(let i=0;i<files.length;i++){setStatus('Uploading photo '+(i+1)+' of '+files.length+'…');const key='wall_'+Date.now()+'_'+i+'_'+Math.floor(Math.random()*100000);const url=await sbUploadImage(key,files[i]);
+      if(url&&await sbUpsert(key,'wall',url)){wall.appendChild(makeWallItem(key,url+'?t='+Date.now()));}else{setStatus('A photo failed to upload — please try again');}}
+    flash('Photos added ✓',2000);});input.click();}
+async function removeWallPhoto(key,url,item){if(!editMode)return;if(!confirm('Remove this photo for everyone?'))return;setStatus('Removing…');
+  try{await fetch(SB_URL+'/rest/v1/content?key=eq.'+encodeURIComponent(KP+key),{method:'DELETE',headers:SB_HEADERS});const p=pathFromUrl(url);if(p)await fetch(SB_URL+'/storage/v1/object/photos/'+p,{method:'DELETE',headers:SB_HEADERS});item.remove();flash('Removed ✓');}
+  catch(e){console.warn('remove failed',e);setStatus('Remove failed');}}
+function toggleEdit(){
+  if(!editMode){const input=prompt('Enter edit password:');if(input!==EDIT_PASSWORD){if(input!==null)alert('Wrong password.');return;}}
+  editMode=!editMode;const btn=document.getElementById('toggle-edit');
+  if(editMode){assignKeys();document.body.classList.add('editing');btn.classList.add('active');btn.innerHTML='&#x2716; Exit Edit';setStatus(IDLE);
+    const ab=document.getElementById('add-photo-btn');if(ab)ab.style.display='inline-block';
+    const e=document.getElementById('wall-empty');if(e&&!document.querySelector('#photo-wall .wall-item'))e.style.display='block';
+    editableSelectors.forEach(sel=>document.querySelectorAll(sel).forEach(el=>{el.setAttribute('contenteditable','true');
+      if(!el.dataset.boundBlur){el.addEventListener('focus',()=>{el._prevText=el.innerHTML;});
+        el.addEventListener('blur',()=>{const prev=el._prevText,next=el.innerHTML;saveText(el);if(prev!==undefined&&prev!==next)pushAction({t:'text',el,key:el.getAttribute('data-ckey'),prev,next});});el.dataset.boundBlur='1';}}));
+    document.querySelectorAll(imageSelectors).forEach(el=>el.addEventListener('click',handleImageClick));
+    ['undo-btn','redo-btn'].forEach(id=>{const b=document.getElementById(id);if(b)b.style.display='inline-block';});refreshUndoButtons();
+  }else{document.body.classList.remove('editing');btn.classList.remove('active');btn.innerHTML='&#x270F; Edit Mode';setStatus('');
+    const ab=document.getElementById('add-photo-btn');if(ab)ab.style.display='none';const e=document.getElementById('wall-empty');if(e)e.style.display='none';
+    editableSelectors.forEach(sel=>document.querySelectorAll(sel).forEach(el=>el.removeAttribute('contenteditable')));
+    document.querySelectorAll(imageSelectors).forEach(el=>el.removeEventListener('click',handleImageClick));undoStack=[];redoStack=[];
+    ['undo-btn','redo-btn'].forEach(id=>{const b=document.getElementById(id);if(b)b.style.display='none';});}
+}
+function handleImageClick(e){if(!editMode)return;e.stopPropagation();const slot=e.currentTarget;const key=slot.getAttribute('data-ckey');const prevUrl=(slot.querySelector('img')||{}).src||null;
+  const input=document.createElement('input');input.type='file';input.accept='image/*';input.style.display='none';document.body.appendChild(input);
+  input.addEventListener('change',async(ev)=>{const file=ev.target.files[0];input.remove();if(!file)return;setStatus('Uploading photo…');const url=await sbUploadImage(key,file);
+    if(url){renderImage(slot,url+'?t='+Date.now());await sbUpsert(key,'image',url);pushAction({t:'image',slot,key,prev:prevUrl,next:url});flash('Photo saved ✓',2000);}else{flash('Upload failed — please try again',2000);}});input.click();}
+/* lightbox */
+let lbIndex=0;
+function wallImgs(){return [...document.querySelectorAll('#photo-wall .wall-item img')].map(i=>i.src);}
+function openLightbox(item){const imgs=[...document.querySelectorAll('#photo-wall .wall-item')];lbIndex=imgs.indexOf(item);showLb();document.getElementById('lightbox').classList.add('open');}
+function showLb(){const s=wallImgs();if(!s.length)return;lbIndex=(lbIndex+s.length)%s.length;document.getElementById('lb-img').src=s[lbIndex];document.getElementById('lb-count').textContent=(lbIndex+1)+' / '+s.length;}
+function closeLb(){document.getElementById('lightbox').classList.remove('open');}
+/* ui */
+function countUp(el){const raw=(el.textContent||'').trim();const t=parseInt(raw,10);if(isNaN(t))return;const d=1100,t0=performance.now();(function s(n){const p=Math.min(1,(n-t0)/d);el.textContent=Math.round(t*(1-Math.pow(1-p,3)));if(p<1)requestAnimationFrame(s);else el.textContent=raw;})(t0);}
+document.addEventListener('DOMContentLoaded',()=>{
+  loadContent();
+  const tb=document.getElementById('toggle-edit');if(tb)tb.addEventListener('click',toggleEdit);
+  const ub=document.getElementById('undo-btn');if(ub)ub.addEventListener('click',doUndo);const rb=document.getElementById('redo-btn');if(rb)rb.addEventListener('click',doRedo);
+  const ab=document.getElementById('add-photo-btn');if(ab)ab.addEventListener('click',addWallPhoto);
+  document.getElementById('lb-close').onclick=closeLb;document.getElementById('lb-prev').onclick=()=>{lbIndex--;showLb();};document.getElementById('lb-next').onclick=()=>{lbIndex++;showLb();};
+  document.getElementById('lightbox').addEventListener('click',e=>{if(e.target.id==='lightbox')closeLb();});
+  document.addEventListener('keydown',e=>{if(!document.getElementById('lightbox').classList.contains('open'))return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft'){lbIndex--;showLb();}if(e.key==='ArrowRight'){lbIndex++;showLb();}});
+  const nt=document.getElementById('navToggle'),nl=document.getElementById('navLinks');nt.addEventListener('click',()=>nl.classList.toggle('open'));nl.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>nl.classList.remove('open')));
+  const io=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){en.target.classList.add('in');io.unobserve(en.target);}}),{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+  const so=new IntersectionObserver(es=>es.forEach(en=>{if(en.isIntersecting){countUp(en.target);so.unobserve(en.target);}}),{threshold:.6});
+  document.querySelectorAll('.stat-card .number').forEach(el=>so.observe(el));
+  const secs=[...document.querySelectorAll('section[id]')],links=[...document.querySelectorAll('.nav-links a')],bt=document.getElementById('backTop'),pr=document.getElementById('scrollProg');
+  function onScroll(){const y=window.scrollY;pr.style.width=(y/(document.body.scrollHeight-innerHeight)*100)+'%';bt.classList.toggle('show',y>600);
+    let cur='';secs.forEach(s=>{if(y>=s.offsetTop-140)cur=s.id;});links.forEach(l=>l.classList.toggle('active',l.getAttribute('href')==='#'+cur));}
+  window.addEventListener('scroll',onScroll,{passive:true});onScroll();bt.onclick=()=>window.scrollTo({top:0,behavior:'smooth'});
+});
+</script>
+</body>
+</html>
